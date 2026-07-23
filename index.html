@@ -3,354 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Revanth Raj | Official Portfolio</title>
+    <title>Dr. Revanth Raj | Physician & Healthcare Innovator</title>
     <style>
-        /* Cyber-Executive Dark Theme */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+        /* Midnight Emerald & Gold Palette */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; }
         body {
-            background-color: #030712;
-            color: #f3f4f6;
+            background-color: #021e17;
+            color: #ecfdf5;
             line-height: 1.8;
-            padding: 20px 10px;
-            overflow-x: hidden;
+            padding: 25px 15px;
         }
 
-        .container { max-width: 880px; margin: 0 auto; }
+        .container { max-width: 920px; margin: 0 auto; }
 
-        /* Keyframe Animations */
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+        /* Equalizer Animation for Singing Section */
+        .equalizer { display: inline-flex; align-items: flex-end; gap: 3px; height: 18px; margin-left: 8px; }
+        .eq-bar { width: 3px; background: #fbbf24; border-radius: 2px; animation: eq 1s ease-in-out infinite alternate; }
+        .eq-bar:nth-child(1) { height: 60%; animation-delay: 0.1s; }
+        .eq-bar:nth-child(2) { height: 100%; animation-delay: 0.3s; }
+        .eq-bar:nth-child(3) { height: 40%; animation-delay: 0.2s; }
+        @keyframes eq { 0% { height: 30%; } 100% { height: 100%; } }
+
+        /* Glowing Emerald Frame */
+        @keyframes tealGlow {
+            0% { border-color: #0d9488; box-shadow: 0 0 15px rgba(13, 148, 136, 0.2); }
+            50% { border-color: #fbbf24; box-shadow: 0 0 25px rgba(251, 191, 36, 0.3); }
+            100% { border-color: #0d9488; box-shadow: 0 0 15px rgba(13, 148, 136, 0.2); }
         }
 
-        @keyframes glowingBorder {
-            0% { border-color: #06b6d4; box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); }
-            50% { border-color: #3b82f6; box-shadow: 0 0 35px rgba(59, 130, 246, 0.4); }
-            100% { border-color: #06b6d4; box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); }
-        }
-
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.15); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.15); }
-            70% { transform: scale(1); }
-        }
-
-        /* Hero Executive Header */
-        .hero-card {
-            background: radial-gradient(circle at top left, #1e1b4b, #0f172a, #030712);
-            border-radius: 24px;
-            padding: 50px 35px;
-            text-align: center;
+        /* Executive Header Header */
+        .hero-banner {
+            background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+            border-radius: 16px;
+            padding: 40px 30px;
             margin-bottom: 30px;
-            border: 2px solid #06b6d4;
-            animation: glowingBorder 6s infinite ease-in-out;
+            border: 2px solid #0d9488;
+            animation: tealGlow 7s infinite alternate;
             position: relative;
         }
 
-        .doctor-icon {
-            font-size: 3.5rem;
-            display: inline-block;
-            margin-bottom: 12px;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .heartbeat-icon {
-            display: inline-block;
-            color: #f43f5e;
-            animation: heartbeat 2s infinite;
-        }
-
-        .hero-card h1 {
-            font-size: 2.8rem;
-            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
+        .hero-title {
+            font-size: 2.7rem;
+            color: #ffffff;
             font-weight: 800;
+            margin-bottom: 5px;
             letter-spacing: -0.5px;
         }
 
-        .subtitle { font-size: 1.25rem; color: #38bdf8; font-weight: 600; margin-bottom: 20px; }
+        .hero-title span { color: #fbbf24; }
+        .hero-sub { color: #2dd4bf; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
 
-        .executive-statement {
-            background: rgba(15, 23, 42, 0.7);
+        .calling-box {
+            background: rgba(2, 44, 34, 0.8);
+            border-left: 4px solid #fbbf24;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+            font-size: 1.05rem;
+            color: #d1fae5;
+        }
+
+        /* Dual Column Layout */
+        .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 25px; margin-bottom: 30px; }
+
+        .block {
+            background: #064e3b;
+            border: 1px solid #0d9488;
             border-radius: 16px;
-            padding: 24px 28px;
-            color: #e2e8f0;
-            font-size: 1.1rem;
-            line-height: 1.85;
-            border-left: 4px solid #38bdf8;
-            margin-top: 20px;
-            text-align: left;
+            padding: 30px 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Modern Glass Cards */
-        .section {
-            background: rgba(17, 24, 39, 0.8);
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            padding: 35px 30px;
-            margin-bottom: 30px;
-            border: 1px solid #1f2937;
-            transition: all 0.3s ease;
-        }
+        .block-full { background: #064e3b; border: 1px solid #0d9488; border-radius: 16px; padding: 30px 25px; margin-bottom: 30px; }
 
-        .section:hover { transform: translateY(-3px); border-color: #374151; }
+        h2 { font-size: 1.4rem; color: #fbbf24; margin-bottom: 20px; border-bottom: 1px solid #0d9488; padding-bottom: 8px; }
 
-        .section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 22px;
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 2px solid #1f2937;
-            color: #38bdf8;
-        }
+        /* Timeline Items */
+        .item { margin-bottom: 20px; border-bottom: 1px dashed rgba(45, 212, 191, 0.2); padding-bottom: 15px; }
+        .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .item-title { font-size: 1.15rem; font-weight: 700; color: #ffffff; }
+        .item-meta { color: #2dd4bf; font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+        .item-desc { color: #a7f3d0; font-size: 0.92rem; }
 
-        /* Timeline / Experience Cards */
-        .timeline-card {
-            background: #0b0f19;
-            border-left: 4px solid #3b82f6;
-            padding: 22px 25px;
-            border-radius: 0 14px 14px 0;
-            margin-bottom: 20px;
-            border-top: 1px solid #1f2937;
-            border-right: 1px solid #1f2937;
-            border-bottom: 1px solid #1f2937;
-        }
-
-        .timeline-title { font-size: 1.25rem; font-weight: 700; color: #f9fafb; margin-bottom: 4px; }
-        .timeline-sub { color: #38bdf8; font-weight: 600; font-size: 1rem; margin-bottom: 10px; }
-        .timeline-desc { color: #9ca3af; font-size: 0.95rem; }
-        .timeline-desc ul { margin-left: 20px; margin-top: 5px; }
-
-        /* Special Certification Cards */
-        .cert-card {
-            background: linear-gradient(135deg, #0b0f19, #1e1b4b);
-            border: 1px solid #818cf8;
-            padding: 22px 25px;
-            border-radius: 14px;
+        /* Special Highlights */
+        .highlight-card {
+            background: #022c22;
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 18px 20px;
             margin-bottom: 15px;
         }
-        .cert-title { font-size: 1.2rem; font-weight: 700; color: #c084fc; margin-bottom: 4px; }
-        .cert-provider { color: #38bdf8; font-weight: 600; font-size: 0.95rem; }
+        .highlight-title { font-weight: 700; color: #fef3c7; font-size: 1.1rem; }
+        .highlight-sub { color: #fbbf24; font-size: 0.9rem; }
 
-        /* Grid Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 15px; }
+        /* Badges */
+        .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .pill { background: #022c22; color: #2dd4bf; border: 1px solid #0d9488; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .pill.gold { color: #fbbf24; border-color: #f59e0b; }
 
-        .card {
-            background: #0b0f19;
-            padding: 24px;
-            border-radius: 16px;
-            border: 1px solid #1f2937;
-            transition: all 0.3s ease;
-        }
+        /* Contact Details */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .c-box { background: #022c22; border: 1px solid #0d9488; padding: 15px; border-radius: 10px; font-size: 0.95rem; }
+        .c-box strong { color: #fbbf24; display: block; }
 
-        .card:hover { transform: translateY(-6px); border-color: #38bdf8; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1); }
-        .card.singing-card { background: linear-gradient(135deg, #0b0f19, #2e1065); border-color: #f472b6; }
-        .card.tech-card { background: linear-gradient(135deg, #0b0f19, #1e1b4b); border-color: #818cf8; }
-
-        .card h3 { font-size: 1.15rem; color: #f9fafb; margin-bottom: 10px; }
-        .card p { color: #9ca3af; font-size: 0.95rem; line-height: 1.7; }
-
-        /* Skill Pills */
-        .tag-container { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-        .tag { background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2); }
-        .tag.purple { background: rgba(192, 132, 252, 0.1); color: #c084fc; border-color: rgba(192, 132, 252, 0.2); }
-        .tag.pink { background: rgba(244, 114, 182, 0.1); color: #f472b6; border-color: rgba(244, 114, 182, 0.2); }
-
-        /* Contact Details Box */
-        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .info-box { background: #0b0f19; padding: 16px 20px; border-radius: 12px; border: 1px solid #1f2937; }
-        .info-box strong { color: #38bdf8; display: block; margin-bottom: 4px; }
-
-        /* Contact Form */
-        .contact-form { display: flex; flex-direction: column; gap: 16px; margin-top: 15px; }
+        .contact-form { display: flex; flex-direction: column; gap: 12px; }
         .contact-form input, .contact-form textarea {
-            padding: 14px;
-            border-radius: 12px;
-            border: 1px solid #1f2937;
-            background: #0b0f19;
-            color: #ffffff;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
+            padding: 12px; border-radius: 8px; border: 1px solid #0d9488; background: #022c22; color: #ffffff; outline: none;
         }
-        .contact-form input:focus, .contact-form textarea:focus { border-color: #38bdf8; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #fbbf24; }
 
         .btn {
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
-            color: #ffffff;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 1rem;
-            cursor: pointer;
-            width: fit-content;
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fbbf24; color: #022c22; padding: 12px 28px; border: none; border-radius: 25px; font-weight: 800; cursor: pointer; width: fit-content; transition: background 0.2s;
         }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+        .btn:hover { background: #f59e0b; }
 
-        footer { text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 40px; padding-bottom: 20px; }
+        footer { text-align: center; color: #059669; font-size: 0.85rem; margin-top: 30px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        <!-- Hero Header -->
-        <header class="hero-card">
-            <div class="doctor-icon">👨‍⚕️🩺</div>
-            <h1>Dr. Revanth Raj</h1>
-            <div class="subtitle">Practicing Physician & Duty Medical Officer</div>
-            
-            <div class="executive-statement">
-                <p>
-                    <span class="heartbeat-icon">❤️</span> <strong>A Purpose-Driven Calling:</strong> Medicine has always been my deepest ambition. For me, wearing the stethoscope is about genuine empathy and a commitment to providing every patient with the highest quality of healthcare. Healing is not just a clinical duty—it is a privilege to restore comfort, advocate for patients, and walk alongside them in their recovery.
-                </p>
+        <!-- Header Section -->
+        <header class="hero-banner">
+            <h1 class="hero-title">Dr. <span>Revanth Raj</span></h1>
+            <div class="hero-sub">Practicing Physician & Duty Medical Officer</div>
+
+            <div class="calling-box">
+                <strong>❤️ A Purpose-Driven Calling:</strong> For me, medicine has always been my true calling. Wearing the stethoscope is about bringing genuine empathy, clinical precision, and comfort to every patient I care for.
             </div>
         </header>
 
-        <!-- Introduction & Academic Qualifications -->
-        <section class="section">
-            <h2>🎓 Introduction & Academic Qualifications</h2>
-
-            <div class="timeline-card" style="border-left-color: #38bdf8;">
-                <div class="timeline-title">Bachelor of Medicine, Bachelor of Surgery (MBBS)</div>
-                <div class="timeline-sub">Ivano-Frankivsk National Medical University, Ukraine</div>
-                <div class="timeline-desc">
-                    Graduated in the year <strong>2023</strong>. Built a comprehensive foundation in global clinical training, internal medicine, and patient care management.
-                </div>
-            </div>
-
-            <div class="grid" style="margin-top: 0;">
-                <div class="card">
-                    <h3 style="color: #9ca3af;">12th Grade / Pre-University</h3>
-                    <p>MESBRS Pre University College (2017)</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: #9ca3af;">10th Grade / Secondary Certificate</h3>
-                    <p>Sri Chaitanya Techno School (2015)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clinical Work Experience -->
-        <section class="section">
-            <h2>🩺 Clinical Work Experience</h2>
-
-            <div class="timeline-card">
-                <div class="timeline-title">Duty Medical Officer (DMO)</div>
-                <div class="timeline-sub">Rehab Institute of Movement Science (10/2025 – 05/2026)</div>
-                <div class="timeline-desc">
-                    Overseeing patient recovery post-surgery, stroke rehabilitation, and complex neurological disorders.
-                </div>
-            </div>
-
-            <div class="timeline-card">
-                <div class="timeline-title">Duty Doctor & Observership</div>
-                <div class="timeline-sub">Siddaganga Medical College & Research Institute</div>
-                <div class="timeline-desc">
-                    <ul>
-                        <li>Completed a 6-month Observership and served as Duty Doctor for 1 year in Internal Medicine & ICU wards.</li>
-                        <li>Organized and conducted community health camps at Siddaganga Mutt, Tumkur, and surrounding regions.</li>
-                        <li>Managed inpatient/outpatient care, differential diagnosis, emergency response, and patient admission/discharge protocols.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-card" style="border-left-color: #c084fc;">
-                <div class="timeline-title">Junior Doctor</div>
-                <div class="timeline-sub">Ivano-Frankivsk National Medical University</div>
-                <div class="timeline-desc">
-                    Gained extensive ward monitoring, diagnostic report drafting, and bedside care experience during clinical rotations.
-                </div>
-            </div>
-        </section>
-
-        <!-- Advanced Courses & Special Participations -->
-        <section class="section">
-            <h2>📜 Advanced Courses & Certifications</h2>
-
-            <div class="cert-card">
-                <div class="cert-title">🤖 AI in Medicine Certification Course</div>
-                <div class="cert-provider">National Board of Examinations in Medical Sciences (NBEMS)</div>
-                <p style="color: #9ca3af; font-size: 0.95rem; margin-top: 5px;">
-                    Specialized training in artificial intelligence applications, machine learning integration, and digital diagnostic workflows in medical practice.
-                </p>
-            </div>
-
-            <div class="cert-card" style="border-color: #38bdf8;">
-                <div class="cert-title" style="color: #38bdf8;">🧠 Comprehensive Migraine & Headache Management</div>
-                <div class="cert-provider">Stanford University School of Medicine</div>
-                <p style="color: #9ca3af; font-size: 0.95rem; margin-top: 5px;">
-                    Advanced coursework on modern pathophysiological mechanisms, diagnostic standards, and evidence-based treatment strategies for migraine.
-                </p>
-            </div>
-        </section>
-
-        <!-- Passions: Music & Tech -->
-        <section class="section">
-            <h2>🎤 Artistic Passions & Tech Innovation</h2>
-            <div class="grid">
-                
-                <div class="card singing-card">
-                    <h3 style="color: #f472b6;">🎶 Passion for Singing</h3>
-                    <p>Beyond medicine, singing is my greatest creative passion. I have formally trained in vocal music and have enjoyed performing on live stages a few times, bringing energy, art, and expression to music.</p>
-                </div>
-
-                <div class="card tech-card">
-                    <h3 style="color: #c084fc;">🤖 Medical AI & Technology</h3>
-                    <p>Deep interest in evaluating specialized medical AI models, research platforms, and digital clinical systems to enhance medical reasoning and clinical workflows.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Skills & Languages -->
-        <section class="section">
-            <h2>🌐 Core Competencies & Languages</h2>
+        <!-- Two Column Main Body -->
+        <div class="two-col">
             
-            <p style="color: #9ca3af; margin-bottom: 10px;"><strong>Clinical Skills:</strong></p>
-            <div class="tag-container" style="margin-bottom: 20px;">
-                <span class="tag">Clinical Diagnosis</span>
-                <span class="tag">Internal Medicine & ICU Care</span>
-                <span class="tag">Rehabilitation & Stroke Care</span>
-                <span class="tag">Differential Diagnosis</span>
-                <span class="tag">Medical Records Maintenance</span>
+            <!-- Left Column: Education & Certifications -->
+            <div class="block">
+                <h2>🎓 Education & Certifications</h2>
+                
+                <div class="item">
+                    <div class="item-title">MBBS (Bachelor of Medicine, Bachelor of Surgery)</div>
+                    <div class="item-meta">Ivano-Frankivsk National Medical University • 2023[cite: 2]</div>
+                    <div class="item-desc">Completed formal medical education and global clinical training[cite: 2].</div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-title">🤖 AI in Medicine Course</div>
+                    <div class="highlight-sub">National Board of Examinations in Medical Sciences (NBEMS)</div>
+                </div>
+
+                <div class="highlight-card" style="border-color: #2dd4bf;">
+                    <div class="highlight-title" style="color: #2dd4bf;">🧠 Migraine & Headache Course</div>
+                    <div class="highlight-sub" style="color: #a7f3d0;">Stanford University School of Medicine</div>
+                </div>
+
+                <div class="item" style="border: none;">
+                    <div class="item-title">Schooling</div>
+                    <div class="item-meta">12th: MESBRS Pre-University (2017)[cite: 2]<br>10th: Sri Chaitanya Techno School (2015)[cite: 2]</div>
+                </div>
             </div>
 
-            <p style="color: #9ca3af; margin-bottom: 10px;"><strong>Languages Spoken:</strong></p>
-            <div class="tag-container">
-                <span class="tag purple">English</span>
-                <span class="tag purple">Telugu</span>
-                <span class="tag purple">Kannada</span>
-                <span class="tag purple">Tamil</span>
-                <span class="tag purple">Hindi</span>
+            <!-- Right Column: Clinical Experience -->
+            <div class="block">
+                <h2>🩺 Clinical Experience</h2>
+
+                <div class="item">
+                    <div class="item-title">Duty Medical Officer (DMO)</div>
+                    <div class="item-meta">Rehab Institute of Movement Science (10/2025 – 05/2026)[cite: 2]</div>
+                    <div class="item-desc">Overseeing post-surgery patients, stroke rehabilitation, and neurological recovery[cite: 2].</div>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">Duty Doctor & Observership</div>
+                    <div class="item-meta">Siddaganga Medical College & Research Institute[cite: 2]</div>
+                    <div class="item-desc">
+                        6-month observership & 1 year duty doctor experience in Internal Medicine and ICU wards[cite: 2]. Organized community health camps at Siddaganga Mutt[cite: 2].
+                    </div>
+                </div>
+
+                <div class="item" style="border: none;">
+                    <div class="item-title">Junior Doctor</div>
+                    <div class="item-meta">Ivano-Frankivsk National Medical University[cite: 2]</div>
+                    <div class="item-desc">Wards care, diagnostic reports drafting, and outpatient duty[cite: 2].</div>
+                </div>
             </div>
-        </section>
+
+        </div>
+
+        <!-- Full Width Passions Section -->
+        <div class="block-full">
+            <h2>🎶 Passions & Core Competencies</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: #022c22; padding: 20px; border-radius: 12px; border: 1px solid #0d9488;">
+                    <h3 style="color: #fbbf24; margin-bottom: 8px;">
+                        Passionate Vocalist
+                        <span class="equalizer">
+                            <span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span>
+                        </span>
+                    </h3>
+                    <p style="color: #a7f3d0; font-size: 0.95rem;">Formally trained in vocal music with stage performance experience—bringing energy, melody, and creative expression to life.</p>
+                </div>
+
+                <div style="background: #022c22; padding: 20px; border-radius: 12px; border: 1px solid #0d9488;">
+                    <h3 style="color: #2dd4bf; margin-bottom: 8px;">Medical AI & Research</h3>
+                    <p style="color: #a7f3d0; font-size: 0.95rem;">Fascinated by integrating artificial intelligence into clinical workflows, diagnostic reference models, and medical reasoning tools.</p>
+                </div>
+            </div>
+
+            <h3 style="color: #ffffff; font-size: 1rem; margin-top: 20px;">Languages Spoken[cite: 2]:</h3>
+            <div class="pills">
+                <span class="pill gold">English[cite: 2]</span>
+                <span class="pill gold">Telugu[cite: 2]</span>
+                <span class="pill gold">Kannada[cite: 2]</span>
+                <span class="pill gold">Tamil[cite: 2]</span>
+                <span class="pill gold">Hindi[cite: 2]</span>
+            </div>
+        </div>
 
         <!-- Contact Section -->
-        <section class="section">
-            <h2>📬 Contact & Location</h2>
-            
-            <div class="contact-info">
-                <div class="info-box">
-                    <strong>📍 Location</strong>
-                    Vidyaranyapura, Bengaluru, 560097
+        <div class="block-full">
+            <h2>📬 Contact & Inquiries</h2>
+
+            <div class="contact-grid">
+                <div class="c-box">
+                    <strong>📍 Location[cite: 2]</strong>
+                    Vidyaranyapura, Bengaluru - 560097[cite: 2]
                 </div>
-                <div class="info-box">
-                    <strong>📞 Phone Numbers</strong>
-                    7892154966 / 8217574789
+                <div class="c-box">
+                    <strong>📞 Phone Numbers[cite: 2]</strong>
+                    7892154966 / 8217574789[cite: 2]
                 </div>
-                <div class="info-box">
-                    <strong>✉️ Email Address</strong>
-                    revan.raj99@gmail.com
+                <div class="c-box">
+                    <strong>✉️ Email Address[cite: 2]</strong>
+                    revan.raj99@gmail.com[cite: 2]
                 </div>
             </div>
 
@@ -360,10 +246,10 @@
                 <textarea rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-        </section>
+        </div>
 
         <footer>
-            <p>&copy; 2026 Dr. Revanth Raj • Official Portfolio</p>
+            <p>&copy; 2026 Dr. Revanth Raj • Official Website</p>
         </footer>
 
     </div>
