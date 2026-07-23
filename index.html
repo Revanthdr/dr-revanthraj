@@ -3,47 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Revanth Raj | Physician & Healthcare Innovator</title>
+    <title>Dr. Revanth Raj | Physician & Healthcare AI Specialist</title>
     <style>
-        /* Midnight Emerald & Gold Palette */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; }
+        /* Modern Executive Midnight & Gold Theme */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; }
         body {
-            background-color: #021e17;
+            background-color: #021a15;
             color: #ecfdf5;
-            line-height: 1.8;
+            line-height: 1.7;
             padding: 25px 15px;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 920px; margin: 0 auto; }
+        .container { max-width: 960px; margin: 0 auto; }
 
-        /* Equalizer Animation for Singing Section */
-        .equalizer { display: inline-flex; align-items: flex-end; gap: 3px; height: 18px; margin-left: 8px; }
-        .eq-bar { width: 3px; background: #fbbf24; border-radius: 2px; animation: eq 1s ease-in-out infinite alternate; }
-        .eq-bar:nth-child(1) { height: 60%; animation-delay: 0.1s; }
-        .eq-bar:nth-child(2) { height: 100%; animation-delay: 0.3s; }
-        .eq-bar:nth-child(3) { height: 40%; animation-delay: 0.2s; }
-        @keyframes eq { 0% { height: 30%; } 100% { height: 100%; } }
+        /* KEYFRAME ANIMATIONS */
+        @keyframes floatAnim {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
 
-        /* Glowing Emerald Frame */
-        @keyframes tealGlow {
+        @keyframes pulseBorder {
             0% { border-color: #0d9488; box-shadow: 0 0 15px rgba(13, 148, 136, 0.2); }
-            50% { border-color: #fbbf24; box-shadow: 0 0 25px rgba(251, 191, 36, 0.3); }
+            50% { border-color: #fbbf24; box-shadow: 0 0 25px rgba(251, 191, 36, 0.35); }
             100% { border-color: #0d9488; box-shadow: 0 0 15px rgba(13, 148, 136, 0.2); }
         }
 
-        /* Executive Header Header */
+        @keyframes eq { 0% { height: 25%; } 100% { height: 100%; } }
+
+        /* Animated SVG Icon Wrapper */
+        .icon-floating {
+            display: inline-block;
+            animation: floatAnim 4s ease-in-out infinite;
+        }
+
+        /* Equalizer Bars */
+        .equalizer { display: inline-flex; align-items: flex-end; gap: 3px; height: 18px; margin-left: 8px; }
+        .eq-bar { width: 3px; background: #fbbf24; border-radius: 2px; animation: eq 0.8s ease-in-out infinite alternate; }
+        .eq-bar:nth-child(1) { height: 60%; animation-delay: 0.1s; }
+        .eq-bar:nth-child(2) { height: 100%; animation-delay: 0.3s; }
+        .eq-bar:nth-child(3) { height: 40%; animation-delay: 0.2s; }
+
+        /* Header Hero */
         .hero-banner {
             background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
-            border-radius: 16px;
-            padding: 40px 30px;
+            border-radius: 20px;
+            padding: 45px 35px;
             margin-bottom: 30px;
             border: 2px solid #0d9488;
-            animation: tealGlow 7s infinite alternate;
+            animation: pulseBorder 6s infinite alternate;
             position: relative;
         }
 
+        .hero-header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
         .hero-title {
-            font-size: 2.7rem;
+            font-size: 2.8rem;
             color: #ffffff;
             font-weight: 800;
             margin-bottom: 5px;
@@ -51,73 +73,133 @@
         }
 
         .hero-title span { color: #fbbf24; }
-        .hero-sub { color: #2dd4bf; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+        .hero-sub { color: #2dd4bf; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; }
 
-        .calling-box {
-            background: rgba(2, 44, 34, 0.8);
-            border-left: 4px solid #fbbf24;
-            padding: 20px 24px;
-            border-radius: 0 12px 12px 0;
-            margin-top: 15px;
-            font-size: 1.05rem;
-            color: #d1fae5;
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border: 1px solid rgba(251, 191, 36, 0.3);
         }
 
-        /* Dual Column Layout */
+        .calling-box {
+            background: rgba(2, 44, 34, 0.85);
+            border-left: 4px solid #fbbf24;
+            padding: 22px 26px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 20px;
+            font-size: 1.05rem;
+            color: #d1fae5;
+            line-height: 1.8;
+        }
+
+        /* Two Column Layout */
         .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 25px; margin-bottom: 30px; }
 
         .block {
             background: #064e3b;
             border: 1px solid #0d9488;
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 30px 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        .block-full { background: #064e3b; border: 1px solid #0d9488; border-radius: 16px; padding: 30px 25px; margin-bottom: 30px; }
+        .block:hover { transform: translateY(-4px); border-color: #fbbf24; }
 
-        h2 { font-size: 1.4rem; color: #fbbf24; margin-bottom: 20px; border-bottom: 1px solid #0d9488; padding-bottom: 8px; }
+        .block-full {
+            background: #064e3b;
+            border: 1px solid #0d9488;
+            border-radius: 18px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            color: #fbbf24;
+            margin-bottom: 22px;
+            border-bottom: 1px solid #0d9488;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
         /* Timeline Items */
-        .item { margin-bottom: 20px; border-bottom: 1px dashed rgba(45, 212, 191, 0.2); padding-bottom: 15px; }
+        .item { margin-bottom: 22px; border-bottom: 1px dashed rgba(45, 212, 191, 0.2); padding-bottom: 16px; }
         .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .item-title { font-size: 1.15rem; font-weight: 700; color: #ffffff; }
+        .item-title { font-size: 1.18rem; font-weight: 700; color: #ffffff; }
         .item-meta { color: #2dd4bf; font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
-        .item-desc { color: #a7f3d0; font-size: 0.92rem; }
+        .item-desc { color: #a7f3d0; font-size: 0.94rem; }
 
-        /* Special Highlights */
+        /* Highlight Cards */
         .highlight-card {
             background: #022c22;
             border: 1px solid #f59e0b;
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin-bottom: 15px;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: transform 0.2s ease;
         }
+        .highlight-card:hover { transform: scale(1.02); }
         .highlight-title { font-weight: 700; color: #fef3c7; font-size: 1.1rem; }
-        .highlight-sub { color: #fbbf24; font-size: 0.9rem; }
+        .highlight-sub { color: #fbbf24; font-size: 0.92rem; margin-top: 2px; }
 
-        /* Badges */
-        .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .pill { background: #022c22; color: #2dd4bf; border: 1px solid #0d9488; padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        /* Interactive Grid Cards */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .interactive-card {
+            background: #022c22;
+            padding: 22px;
+            border-radius: 14px;
+            border: 1px solid #0d9488;
+            transition: all 0.3s ease;
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            border-color: #fbbf24;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Badges & Pills */
+        .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .pill { background: #022c22; color: #2dd4bf; border: 1px solid #0d9488; padding: 6px 16px; border-radius: 20px; font-size: 0.88rem; font-weight: 600; }
         .pill.gold { color: #fbbf24; border-color: #f59e0b; }
 
-        /* Contact Details */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
-        .c-box { background: #022c22; border: 1px solid #0d9488; padding: 15px; border-radius: 10px; font-size: 0.95rem; }
-        .c-box strong { color: #fbbf24; display: block; }
+        /* Contact Details Grid */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .c-box { background: #022c22; border: 1px solid #0d9488; padding: 18px; border-radius: 12px; font-size: 0.95rem; }
+        .c-box strong { color: #fbbf24; display: block; margin-bottom: 4px; }
 
-        .contact-form { display: flex; flex-direction: column; gap: 12px; }
+        /* Form */
+        .contact-form { display: flex; flex-direction: column; gap: 14px; }
         .contact-form input, .contact-form textarea {
-            padding: 12px; border-radius: 8px; border: 1px solid #0d9488; background: #022c22; color: #ffffff; outline: none;
+            padding: 14px; border-radius: 10px; border: 1px solid #0d9488; background: #022c22; color: #ffffff; font-size: 1rem; outline: none; transition: border-color 0.2s;
         }
         .contact-form input:focus, .contact-form textarea:focus { border-color: #fbbf24; }
 
         .btn {
-            background: #fbbf24; color: #022c22; padding: 12px 28px; border: none; border-radius: 25px; font-weight: 800; cursor: pointer; width: fit-content; transition: background 0.2s;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #022c22;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            width: fit-content;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .btn:hover { background: #f59e0b; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.3); }
 
-        footer { text-align: center; color: #059669; font-size: 0.85rem; margin-top: 30px; }
+        footer { text-align: center; color: #059669; font-size: 0.88rem; margin-top: 35px; padding-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -126,25 +208,40 @@
         
         <!-- Header Section -->
         <header class="hero-banner">
-            <h1 class="hero-title">Dr. <span>Revanth Raj</span></h1>
-            <div class="hero-sub">Practicing Physician & Duty Medical Officer</div>
+            <div class="hero-header-flex">
+                <div>
+                    <h1 class="hero-title">Dr. <span>Revanth Raj</span></h1>
+                    <div class="hero-sub">Practicing Physician & Healthcare AI Specialist</div>
+                </div>
+                <div class="icon-floating">
+                    <!-- Vector Medical Stethoscope SVG Graphics -->
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 0 0 4.5 2.6V10a6 6 0 0 0 12 0V2.6a.3.3 0 0 0-.3-.3h-1.4a.3.3 0 0 0-.3.3V10a4 4 0 1 1-8 0V2.6a.3.3 0 0 0-.3-.3H4.8z"/><path d="M10.5 16a2.5 2.5 0 0 0 5 0V14"/><circle cx="18" cy="10" r="2"/></svg>
+                </div>
+            </div>
+
+            <div style="margin-top: 10px;">
+                <span class="status-badge">⚡ Available for Clinical Evaluation & Medical AI Roles</span>
+            </div>
 
             <div class="calling-box">
-                <strong>❤️ A Purpose-Driven Calling:</strong> For me, medicine has always been my true calling. Wearing the stethoscope is about bringing genuine empathy, clinical precision, and comfort to every patient I care for.
+                <strong>❤️ A Purpose-Driven Calling:</strong> For me, medicine has always been my true calling. Wearing the stethoscope is about bringing genuine empathy, clinical precision, and comfort to every patient I care for—while leveraging cutting-edge technology to advance patient outcomes.
             </div>
         </header>
 
         <!-- Two Column Main Body -->
         <div class="two-col">
             
-            <!-- Left Column: Education & Certifications -->
+            <!-- Left Column: Education & Special Certifications -->
             <div class="block">
-                <h2>🎓 Education & Certifications</h2>
+                <h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    Education & Certifications
+                </h2>
                 
                 <div class="item">
-                    <div class="item-title">MBBS (Bachelor of Medicine, Bachelor of Surgery)</div>
+                    <div class="item-title">MBBS (Bachelor of Medicine, Bachelor of Surgery)[cite: 2]</div>
                     <div class="item-meta">Ivano-Frankivsk National Medical University • 2023[cite: 2]</div>
-                    <div class="item-desc">Completed formal medical education and global clinical training[cite: 2].</div>
+                    <div class="item-desc">Completed formal medical education and international clinical training.[cite: 2]</div>
                 </div>
 
                 <div class="highlight-card">
@@ -158,23 +255,26 @@
                 </div>
 
                 <div class="item" style="border: none;">
-                    <div class="item-title">Schooling</div>
+                    <div class="item-title">Academic Background[cite: 2]</div>
                     <div class="item-meta">12th: MESBRS Pre-University (2017)[cite: 2]<br>10th: Sri Chaitanya Techno School (2015)[cite: 2]</div>
                 </div>
             </div>
 
             <!-- Right Column: Clinical Experience -->
             <div class="block">
-                <h2>🩺 Clinical Experience</h2>
+                <h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/></svg>
+                    Clinical Experience
+                </h2>
 
                 <div class="item">
-                    <div class="item-title">Duty Medical Officer (DMO)</div>
+                    <div class="item-title">Duty Medical Officer (DMO)[cite: 2]</div>
                     <div class="item-meta">Rehab Institute of Movement Science (10/2025 – 05/2026)[cite: 2]</div>
-                    <div class="item-desc">Overseeing post-surgery patients, stroke rehabilitation, and neurological recovery[cite: 2].</div>
+                    <div class="item-desc">Overseeing post-surgery patients, stroke rehabilitation, and complex neurological recovery.[cite: 2]</div>
                 </div>
 
                 <div class="item">
-                    <div class="item-title">Duty Doctor & Observership</div>
+                    <div class="item-title">Duty Doctor & Observership[cite: 2]</div>
                     <div class="item-meta">Siddaganga Medical College & Research Institute[cite: 2]</div>
                     <div class="item-desc">
                         6-month observership & 1 year duty doctor experience in Internal Medicine and ICU wards[cite: 2]. Organized community health camps at Siddaganga Mutt[cite: 2].
@@ -182,9 +282,9 @@
                 </div>
 
                 <div class="item" style="border: none;">
-                    <div class="item-title">Junior Doctor</div>
+                    <div class="item-title">Junior Doctor[cite: 2]</div>
                     <div class="item-meta">Ivano-Frankivsk National Medical University[cite: 2]</div>
-                    <div class="item-desc">Wards care, diagnostic reports drafting, and outpatient duty[cite: 2].</div>
+                    <div class="item-desc">Wards monitoring, diagnostic reports drafting, and outpatient department duty[cite: 2].</div>
                 </div>
             </div>
 
@@ -192,26 +292,33 @@
 
         <!-- Full Width Passions Section -->
         <div class="block-full">
-            <h2>🎶 Passions & Core Competencies</h2>
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Special Passions & Innovations
+            </h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div style="background: #022c22; padding: 20px; border-radius: 12px; border: 1px solid #0d9488;">
-                    <h3 style="color: #fbbf24; margin-bottom: 8px;">
+            <div class="grid-2">
+                <div class="interactive-card">
+                    <h3 style="color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center;">
                         Passionate Vocalist
                         <span class="equalizer">
                             <span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span>
                         </span>
                     </h3>
-                    <p style="color: #a7f3d0; font-size: 0.95rem;">Formally trained in vocal music with stage performance experience—bringing energy, melody, and creative expression to life.</p>
+                    <p style="color: #a7f3d0; font-size: 0.95rem;">Formally trained in vocal music with live stage performance experience—bringing energy, melody, and creative expression to life.</p>
                 </div>
 
-                <div style="background: #022c22; padding: 20px; border-radius: 12px; border: 1px solid #0d9488;">
-                    <h3 style="color: #2dd4bf; margin-bottom: 8px;">Medical AI & Research</h3>
-                    <p style="color: #a7f3d0; font-size: 0.95rem;">Fascinated by integrating artificial intelligence into clinical workflows, diagnostic reference models, and medical reasoning tools.</p>
+                <div class="interactive-card">
+                    <h3 style="color: #2dd4bf; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        <!-- Vector Brain AI SVG -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/><path d="M12 12v10"/></svg>
+                        Medical AI & Research
+                    </h3>
+                    <p style="color: #a7f3d0; font-size: 0.95rem;">Deep focus on integrating medical artificial intelligence into clinical workflows, diagnostic reasoning, and complex evaluation platforms.</p>
                 </div>
             </div>
 
-            <h3 style="color: #ffffff; font-size: 1rem; margin-top: 20px;">Languages Spoken[cite: 2]:</h3>
+            <h3 style="color: #ffffff; font-size: 1rem; margin-top: 22px;">Fluent Languages:[cite: 2]</h3>
             <div class="pills">
                 <span class="pill gold">English[cite: 2]</span>
                 <span class="pill gold">Telugu[cite: 2]</span>
@@ -223,7 +330,10 @@
 
         <!-- Contact Section -->
         <div class="block-full">
-            <h2>📬 Contact & Inquiries</h2>
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Contact & Professional Inquiries
+            </h2>
 
             <div class="contact-grid">
                 <div class="c-box">
@@ -241,15 +351,15 @@
             </div>
 
             <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Your Name / Organization" required>
                 <input type="email" placeholder="Your Email Address" required>
-                <textarea rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <textarea rows="4" placeholder="Your Message or Project Details" required></textarea>
+                <button type="submit" class="btn">Send Direct Message</button>
             </form>
         </div>
 
         <footer>
-            <p>&copy; 2026 Dr. Revanth Raj • Official Website</p>
+            <p>&copy; 2026 Dr. Revanth Raj • Physician & Healthcare Specialist Portfolio</p>
         </footer>
 
     </div>
